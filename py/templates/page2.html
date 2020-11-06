@@ -1,0 +1,228 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Page</title>
+   <!--Made with love by Mutiullah Samim -->
+
+	<!--Bootsrap 4 CDN-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!--Fontawesome CDN-->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+	<!--Custom styles-->
+    <style >
+        table td .radio { border:1px solid red;display: block;margin:0 auto;}
+        table tr td { text-align:center; margin-left:auto; margin-right:auto; border:1px solid red;}
+                html,body{
+                    background-image: url('https://i.pinimg.com/originals/fa/50/a9/fa50a921bbe586395b7a0af23da08f9d.jpg');
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    height: 100%;
+                    }
+                    .center {
+                          margin: auto;
+                          width: 60%;
+                          padding: 100px;
+                        }
+                        .card{
+                            color:white;
+                            margin-top: auto;
+                            margin-bottom: auto;
+                            background-color: rgba(0,0,0,0.5) !important;
+                            }
+                .btn-block:hover{
+                    color: black;
+                    background-color: #FFC312;
+                    }
+
+
+
+    </style>
+</head>
+<body>
+<div class="container center">
+        <form method="POST" action="/page2">
+
+            <div class="card">
+                <div class="card-header">
+                    <h3>Take Survey</h3>
+                </div>
+                <div class="card-body">
+                    <h4>Personal Details</h4>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Surname</label>
+                            <div class="col-sm-10">
+                             <input type="text" class="form-control"  name="surname" >
+                            </div>
+                          </div>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Full Names</label>
+                            <div class="col-sm-10">
+                             <input type="text" class="form-control"  name="FullNames"  >
+                            </div>
+                          </div>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Contact Number</label>
+                            <div class="col-sm-10">
+                             <input type="number" class="form-control" name="Contact"  >
+                            </div>
+                          </div>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Date</label>
+                            <div class="col-sm-10">
+                             <input type="date" class="form-control"  name="Date"   >
+                            </div>
+                          </div>
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">Age</label>
+                        <div class="col-sm-10">
+                         <input type="number" class="form-control" name="Age"  >
+                        </div>
+                      </div>
+                    <h4>What is your favourite food? (You can choose more than 1 answer)</h4>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value=true name="Pizza" >
+                          <label class="form-check-label" >
+                           Pizza
+                          </label>
+                        </div>
+                    <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value=true name="Pasta">
+                          <label class="form-check-label" >
+                           Pasta
+                          </label>
+                        </div>
+                    <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value=true name="PapandWors">
+                          <label class="form-check-label" >
+                           Pap and Wors
+                          </label>
+                        </div>
+                    <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value=true name="Chicken">
+                          <label class="form-check-label" >
+                            Chicken Stir Fry
+                          </label>
+                        </div>
+                    <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value=true name="Beef">
+                          <label class="form-check-label" >
+                            Beef stir fry
+                          </label>
+                        </div>
+                    <div class="form-check">
+                          <input class="form-check-input" type="checkbox" name="other" value=true >
+                          <label class="form-check-label" >
+                           Other
+                          </label>
+                        </div>
+                    <h4>On a scale of 1 to 5 indicate weather you strongly agree to strongly disagree</h4>
+                    <div class="table">
+                        <table class="table table-bordered table-striped table-highlight">
+                            <thead>
+                                <th>Questions</th>
+                                <th>Strongly Agree</th>
+                                <th>Agree</th>
+                                <th>Neutral</th>
+                                <th>Disagree</th>
+                                <th>Strong Disagree</th>
+
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>I like to eat out</td>
+                                    <td><div class="form-check form-check-inline" >
+                                        <input class="form-check-input" type="radio" name="out" id="out1" value=op1>
+                                    </div></td>
+                                    <td><div class="form-check form-check-inline" >
+                                        <input class="form-check-input" type="radio" name="out" id="out2" value=op2>
+                                    </div></td>
+                                    <td><div class="form-check form-check-inline" >
+                                        <input class="form-check-input" type="radio" name="out" id="out3" value=op3>
+                                    </div></td>
+                                    <td><div class="form-check form-check-inline" >
+                                        <input class="form-check-input" type="radio" name="out" id="out4" value=op4>
+                                    </div></td>
+                                     <td><div class="form-check form-check-inline" >
+                                        <input class="form-check-input" type="radio" name="out" id="out5" value=op5>
+                                    </div></td>
+
+                                </tr>
+                                            <tr>
+                                    <td>I like to watch movies</td>
+                                    <td><div class="form-check form-check-inline" >
+                                        <input class="form-check-input" type="radio" name="movies" id="movies1" value=op1>
+                                    </div></td>
+                                    <td><div class="form-check form-check-inline" >
+                                        <input class="form-check-input" type="radio" name="movies" id="movies2" value=op2>
+                                    </div></td>
+                                    <td><div class="form-check form-check-inline" >
+                                        <input class="form-check-input" type="radio" name="movies" id="movies3" value=op3>
+                                    </div></td>
+                                    <td><div class="form-check form-check-inline" >
+                                        <input class="form-check-input" type="radio" name="movies" id="movies4" value=op4>
+                                    </div></td>
+                                     <td><div class="form-check form-check-inline" >
+                                        <input class="form-check-input" type="radio" name="movies" id="movies5" value=op5>
+                                    </div></td>
+                                </tr>
+                                <tr>
+                                    <td>I like to watch TV</td>
+                                    <td><div class="form-check form-check-inline" >
+                                        <input class="form-check-input" type="radio" name="TV" id="TV1" value=op1>
+                                    </div></td>
+                                    <td><div class="form-check form-check-inline" >
+                                        <input class="form-check-input" type="radio" name="TV" id="TV2" value=op2>
+                                    </div></td>
+                                    <td><div class="form-check form-check-inline" >
+                                        <input class="form-check-input" type="radio" name="TV" id="TV3" value=op3>
+                                    </div></td>
+                                    <td><div class="form-check form-check-inline" >
+                                        <input class="form-check-input" type="radio" name="TV" id="TV4" value=op4>
+                                    </div></td>
+                                     <td><div class="form-check form-check-inline" >
+                                        <input class="form-check-input" type="radio" name="TV" id="TV5" value=op5>
+                                    </div></td>
+
+                                </tr>
+                                <tr>
+                                    <td>I like to listen to radio</td>
+                                    <td><div class="form-check form-check-inline" >
+                                        <input class="form-check-input" type="radio" name="radio" id="radio1" value=op1>
+                                    </div></td>
+                                    <td><div class="form-check form-check-inline" >
+                                        <input class="form-check-input" type="radio" name="radio" id="radio2" value=op2>
+                                    </div></td>
+                                    <td><div class="form-check form-check-inline" >
+                                        <input class="form-check-input" type="radio" name="radio" id="radio3" value=op3>
+                                    </div></td>
+                                    <td><div class="form-check form-check-inline" >
+                                        <input class="form-check-input" type="radio" name="radio" id="radio4" value=op4>
+                                    </div></td>
+                                     <td><div class="form-check form-check-inline" >
+                                        <input class="form-check-input" type="radio" name="radio" id="radio5" value=op5>
+                                    </div></td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <br>
+                <a href="/">
+                <button type="button" class="btn  btn-block" id="takesurvey">Back</button>
+                 </a>
+            </div>
+
+
+        </form>
+</div>
+</body>
+</html>
